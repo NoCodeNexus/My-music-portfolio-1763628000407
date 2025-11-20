@@ -1,0 +1,199 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saregama</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e0f2f7; /* Light blue background */
+            color: #333;
+        }
+
+        /* Header and Nav */
+        header {
+            background-color: #1e3a8a; /* Dark blue header */
+            color: #fff;
+            padding: 1em 0;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #3b82f6; /* Medium blue nav */
+            color: #fff;
+            padding: 0.5em 0;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 1em;
+        }
+
+        .brand {
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+
+        .menu-toggle {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5em;
+            cursor: pointer;
+            padding: 0;
+        }
+
+        .nav-links {
+            display: none;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            width: 100%;
+            text-align: center;
+        }
+
+        .nav-links li {
+            padding: 0.7em 0;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .nav-links a:hover {
+            text-decoration: underline;
+        }
+
+        .nav-links.active {
+            display: block;
+        }
+
+
+        /* Sections */
+        section {
+            padding: 2em;
+            margin: 1em;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        section h2 {
+            color: #1e3a8a; /* Dark blue section heading */
+            border-bottom: 2px solid #1e3a8a;
+            padding-bottom: 0.5em;
+            margin-bottom: 0.5em;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1e3a8a; /* Dark blue footer */
+            color: #fff;
+            text-align: center;
+            padding: 1em 0;
+            position: sticky;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Responsive Design */
+        @media (min-width: 768px) {
+            .menu-toggle {
+                display: none;
+            }
+
+            .nav-links {
+                display: flex;
+                justify-content: space-around;
+                width: auto;
+            }
+
+            .nav-links li {
+                padding: 0;
+            }
+
+            .nav-links a {
+                padding: 0.5em 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Saregama</h1>
+        <p>Melody Reimagined.</p>
+    </header>
+
+    <nav>
+        <div class="navbar">
+            <div class="brand">Saregama</div>
+            <button class="menu-toggle">&#9776;</button>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="about">
+        <h2>About Us</h2>
+        <p>Welcome to Saregama, where we blend tradition with innovation to create captivating musical experiences. With a legacy spanning decades, we're dedicated to helping artists bring their unique sounds to the world.</p>
+    </section>
+
+    <section id="services">
+        <h2>Our Services</h2>
+        <ul>
+            <li>Music Production</li>
+            <li>Audio Engineering</li>
+            <li>Artist Development</li>
+            <li>Sound Design</li>
+        </ul>
+    </section>
+
+    <section id="portfolio">
+        <h2>Portfolio</h2>
+        <p>Explore our diverse range of musical projects.</p>
+        <!-- Add project examples here -->
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Reach out to discuss your next project!</p>
+        <p>Email: contact@saregama.com</p>
+        <p>Phone: (987) 654-3210</p>
+    </section>
+
+    <footer>
+        &copy; 2024 Saregama
+    </footer>
+
+    <script>
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
+```
